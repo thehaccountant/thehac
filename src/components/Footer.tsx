@@ -1,14 +1,24 @@
 
 import { Link } from "react-router-dom";
-import { Mail, Phone, Home, Check } from "lucide-react";
+import { Mail, Phone, Home, Check, Clock } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  
+  const businessHours = [
+    { day: "Monday", hours: "9 am–5 pm" },
+    { day: "Tuesday", hours: "9 am–5 pm" },
+    { day: "Wednesday", hours: "9 am–5 pm" },
+    { day: "Thursday", hours: "9 am–5 pm" },
+    { day: "Friday", hours: "9 am–5 pm" },
+    { day: "Saturday", hours: "Closed" },
+    { day: "Sunday", hours: "Closed" },
+  ];
 
   return (
     <footer className="bg-gray-100 dark:bg-gray-900 pt-12 pb-6">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
             <div className="mb-4">
@@ -103,6 +113,24 @@ const Footer = () => {
                 <Check className="h-4 w-4 mr-2 text-hac-blue dark:text-hac-lightblue" />
                 <span className="text-gray-600 dark:text-gray-400">Tax Submissions</span>
               </li>
+            </ul>
+          </div>
+          
+          {/* Business Hours */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">
+              <span className="flex items-center">
+                <Clock className="h-5 w-5 mr-2 text-hac-blue dark:text-hac-lightblue" />
+                Business Hours
+              </span>
+            </h3>
+            <ul className="space-y-2">
+              {businessHours.map((schedule) => (
+                <li key={schedule.day} className="flex justify-between">
+                  <span className="text-gray-600 dark:text-gray-400">{schedule.day}</span>
+                  <span className="text-gray-700 dark:text-gray-300 font-medium">{schedule.hours}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
