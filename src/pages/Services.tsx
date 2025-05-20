@@ -146,7 +146,7 @@ const Services = () => {
       title: 'Tax Compliance Status Pin',
       subtitle: 'HAC Compliance Assurance',
       description: 'Ensure your business stays in good standing.',
-      content: 'We'll help you generate your compliance status pin for tenders and banking.',
+      content: 'We\'ll help you generate your compliance status pin for tenders and banking.',
       icon: <Check className="h-8 w-8 text-hac-blue dark:text-hac-lightblue" />,
       features: [
         'TCS pin generation',
