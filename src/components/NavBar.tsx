@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 import { Phone, Menu, X } from "lucide-react";
+import { Button } from "./ui/button";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,28 +54,32 @@ const NavBar = () => {
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-3">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="flex flex-col">
-              <div className="text-2xl font-bold bg-gradient-to-r from-hac-blue to-hac-lightblue text-transparent bg-clip-text">
-                HAC
-              </div>
-              <div className="text-xs text-gray-600 dark:text-gray-300">
-                The Home for Accounting Consulting
+            <div className="flex items-center">
+              <img 
+                src="/lovable-uploads/4b889b51-5e40-41a2-a365-63f1d9e0fc2c.png" 
+                alt="HAC Logo" 
+                className="h-12 w-auto mr-3"
+              />
+              <div className="hidden sm:block">
+                <div className="text-xs text-gray-600 dark:text-gray-300">
+                  The Home for Accounting Consulting
+                </div>
               </div>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
                 className={`text-sm font-medium transition-colors hover:text-hac-blue dark:hover:text-hac-lightblue ${
                   isActive(link.path)
-                    ? "text-hac-blue dark:text-hac-lightblue"
+                    ? "text-hac-blue dark:text-hac-lightblue border-b-2 border-hac-blue dark:border-hac-lightblue pb-1"
                     : "text-gray-700 dark:text-gray-300"
                 }`}
               >
@@ -86,31 +91,37 @@ const NavBar = () => {
           {/* Actions */}
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
-            <a
-              href="tel:+27633816727"
-              className="flex items-center bg-gradient-to-r from-hac-blue to-hac-lightblue text-white px-4 py-2 rounded-md hover:opacity-90 transition-opacity"
+            <Button
+              asChild
+              className="bg-gradient-to-r from-hac-blue to-hac-lightblue text-white hover:opacity-90 transition-opacity"
+              size="sm"
             >
-              <Phone className="h-4 w-4 mr-2" />
-              Call Us
-            </a>
+              <a href="tel:+27633816727" className="flex items-center">
+                <Phone className="h-4 w-4 mr-2" />
+                Call Us
+              </a>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center md:hidden space-x-4">
             <ThemeToggle />
-            <a
-              href="tel:+27633816727"
-              className="bg-hac-blue text-white p-2 rounded-full hover:bg-opacity-90"
-              aria-label="Call us"
+            <Button
+              asChild
+              size="icon"
+              variant="outline"
+              className="bg-gradient-to-r from-hac-blue to-hac-lightblue text-white border-none p-2 rounded-full hover:opacity-90"
             >
-              <Phone className="h-5 w-5" />
-            </a>
+              <a href="tel:+27633816727" aria-label="Call us">
+                <Phone className="h-4 w-4" />
+              </a>
+            </Button>
             <button
               onClick={toggleMenu}
               className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
           </div>
         </div>

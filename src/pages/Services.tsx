@@ -1,6 +1,5 @@
-
 import { useEffect } from 'react';
-import { Phone, Mail, FileText, Users, Check, Calendar } from 'lucide-react';
+import { Mail, FileText, Users, Check, Calendar } from 'lucide-react';
 import CTAButton from '../components/CTAButton';
 
 const Services = () => {
@@ -231,24 +230,15 @@ const Services = () => {
               Expert accounting, tax, payroll & business compliance services tailored to your needs.
             </p>
             
-            <div className="flex flex-wrap justify-center gap-4">
-              <CTAButton 
-                href="tel:+27633816727" 
-                size="lg" 
-                icon={<Phone className="h-5 w-5" />}
-              >
-                Call Us Today
-              </CTAButton>
-              
-              <CTAButton 
-                to="/contact" 
-                variant="outline" 
-                size="lg" 
-                icon={<Mail className="h-5 w-5" />}
-              >
-                Get in Touch
-              </CTAButton>
-            </div>
+            <CTAButton 
+              to="/contact" 
+              variant="primary" 
+              size="lg" 
+              icon={<Mail className="h-5 w-5" />}
+              className="px-8 py-2.5 shadow-lg"
+            >
+              Get in Touch
+            </CTAButton>
           </div>
         </div>
       </section>
@@ -263,10 +253,10 @@ const Services = () => {
                 id={category.id}
                 className={`flex flex-col md:flex-row items-start gap-8 ${
                   index % 2 !== 0 ? 'md:flex-row-reverse' : ''
-                } animate-on-scroll`}
+                } animate-on-scroll rounded-2xl p-6 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors`}
               >
                 <div className="md:w-1/3 flex flex-col">
-                  <div className="mb-4 p-4 bg-gray-50 dark:bg-gray-800 inline-flex rounded-xl">
+                  <div className="mb-4 p-4 bg-gradient-to-br from-hac-blue/10 to-hac-lightblue/10 dark:from-hac-blue/20 dark:to-hac-lightblue/20 inline-flex rounded-xl">
                     {category.icon}
                   </div>
                   <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
@@ -286,13 +276,14 @@ const Services = () => {
                       to="/contact" 
                       variant="primary" 
                       size="sm"
+                      className="rounded-full shadow-md hover:shadow-lg transition-shadow"
                     >
                       Enquire Now
                     </CTAButton>
                   </div>
                 </div>
                 
-                <div className="md:w-2/3 bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+                <div className="md:w-2/3 bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
                   <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">
                     What We Offer:
                   </h3>
@@ -305,26 +296,14 @@ const Services = () => {
                     ))}
                   </ul>
                   
-                  <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700 flex items-center justify-between">
-                    <div className="text-sm text-gray-500 dark:text-gray-400">
-                      Need more information?
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <a 
-                        href="tel:+27633816727" 
-                        className="text-hac-blue dark:text-hac-lightblue hover:underline flex items-center"
-                      >
-                        <Phone className="h-4 w-4 mr-1" />
-                        <span className="text-sm">+27 63 381 6727</span>
-                      </a>
-                      <a 
-                        href="mailto:info.thehacco@gmail.com" 
-                        className="text-hac-blue dark:text-hac-lightblue hover:underline flex items-center"
-                      >
-                        <Mail className="h-4 w-4 mr-1" />
-                        <span className="text-sm">Email Us</span>
-                      </a>
-                    </div>
+                  <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700 flex items-center justify-end">
+                    <a 
+                      href="mailto:info.thehacco@gmail.com" 
+                      className="text-hac-blue dark:text-hac-lightblue hover:underline flex items-center px-4 py-2 rounded-full bg-blue-50 dark:bg-blue-900/30 transition-colors hover:bg-blue-100 dark:hover:bg-blue-900/50"
+                    >
+                      <Mail className="h-4 w-4 mr-2" />
+                      <span>Email for Details</span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -347,6 +326,7 @@ const Services = () => {
             to="/contact" 
             variant="secondary" 
             size="lg"
+            className="px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-shadow"
           >
             Contact Us Now
           </CTAButton>
