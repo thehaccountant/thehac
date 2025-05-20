@@ -40,16 +40,10 @@ const ServiceCard = ({
         </ul>
       )}
       
-      <div className="flex justify-between items-center mt-4">
+      <div className="flex justify-center mt-4">
         <CTAButton to="/contact" variant="outline" size="sm">
           Enquire Now
         </CTAButton>
-        
-        <div className="text-sm text-gray-500 dark:text-gray-400">
-          <a href="tel:+27633816727" className="hover:text-hac-blue dark:hover:text-hac-lightblue">
-            +27 63 381 6727
-          </a>
-        </div>
       </div>
     </div>
   );
