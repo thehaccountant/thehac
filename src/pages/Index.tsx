@@ -63,11 +63,11 @@ const Index = () => {
   const testimonials = [
     {
       quote: "Professional and fast service every time!",
-      author: "John D."
+      author: "Sipho M."
     },
     {
       quote: "Helped me register my business and file my tax without stress.",
-      author: "Sarah M."
+      author: "Nomsa K."
     }
   ];
 
