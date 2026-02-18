@@ -47,6 +47,24 @@ const Contact = () => {
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8">
               We're ready to help you succeed with your financial and compliance needs.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://wa.me/27633816727"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-green-500 to-green-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+              >
+                <Phone className="h-5 w-5 mr-2" />
+                WhatsApp Us Now
+              </a>
+              <a
+                href="mailto:info.thehacco@gmail.com"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-hac-blue to-hac-lightblue rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+              >
+                <Mail className="h-5 w-5 mr-2" />
+                Email Us
+              </a>
+            </div>
           </div>
         </div>
       </section>
