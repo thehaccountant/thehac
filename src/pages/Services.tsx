@@ -43,9 +43,7 @@ const Services = () => {
       content: 'Our experienced team provides accurate and timely bookkeeping to keep your records audit-ready.',
       icon: <FileText className="h-8 w-8 text-hac-blue dark:text-hac-lightblue" />,
       features: [
-        'Monthly financial statements',
-        'Balance sheet preparation',
-        'Income statement preparation',
+        'Monthly bookkeeping reports (incl. balance sheet & income statement)',
         'Accounts payable management',
         'Accounts receivable management'
       ]
@@ -61,7 +59,7 @@ const Services = () => {
         'Payslip generation',
         'Statutory deductions',
         'PAYE submissions',
-        'UIF registrations',
+        'UIF declarations',
         'Employee tax certificates (IRP5/IT3a)'
       ]
     },
@@ -90,7 +88,7 @@ const Services = () => {
       features: [
         'CIPC annual return submissions',
         'Compliance status tracking',
-        'Financial statements preparation',
+        
         'Deadline management',
         'Penalty avoidance strategies'
       ]
@@ -148,9 +146,7 @@ const Services = () => {
       content: 'We\'ll help you generate your compliance status pin for tenders and banking.',
       icon: <Check className="h-8 w-8 text-hac-blue dark:text-hac-lightblue" />,
       features: [
-        'TCS pin generation',
-        'Compliance status verification',
-        'Tax clearance certificates',
+        'Tax compliance status pin for good standing (formerly known as tax clearance)',
         'Tender compliance',
         'Banking requirements compliance'
       ]
@@ -164,7 +160,7 @@ const Services = () => {
       icon: <Users className="h-8 w-8 text-hac-blue dark:text-hac-lightblue" />,
       features: [
         'COIDA registrations',
-        'Annual return submissions',
+        'Return of earnings submissions',
         'Letter of Good Standing',
         'Compliance monitoring',
         'Claims management assistance'
@@ -208,7 +204,7 @@ const Services = () => {
       content: 'Company tax registration and SARS eFiling setup made easy.',
       icon: <FileText className="h-8 w-8 text-hac-blue dark:text-hac-lightblue" />,
       features: [
-        'Company income tax registration',
+        'Company tax types activation',
         'eFiling profile setup',
         'Representative user registration',
         'Tax number verification',
