@@ -59,7 +59,7 @@ const NavBar = () => {
           <Link to="/" className="flex items-center">
             <div className="flex items-center">
               <img 
-                src="/lovable-uploads/4b889b51-5e40-41a2-a365-63f1d9e0fc2c.png" 
+                src="/lovable-uploads/hacnobg1.png" 
                 alt="HAC Logo" 
                 className="h-12 w-auto mr-3"
               />
