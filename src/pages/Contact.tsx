@@ -58,11 +58,11 @@ const Contact = () => {
                 WhatsApp Us Now
               </a>
               <a
-                href="mailto:info.thehacco@gmail.com"
+                href="tel:+27633816727"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-hac-blue to-hac-lightblue rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
-                <Mail className="h-5 w-5 mr-2" />
-                Email Us
+                <Phone className="h-5 w-5 mr-2" />
+                Call Us
               </a>
             </div>
           </div>
