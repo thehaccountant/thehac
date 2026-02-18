@@ -77,7 +77,7 @@ const Contact = () => {
                 
                 <div>
                   <h3 className="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">
-                    Call Us
+                    Call or WhatsApp Us
                   </h3>
                   <a 
                     href="tel:+27633816727"
