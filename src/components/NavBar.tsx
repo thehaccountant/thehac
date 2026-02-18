@@ -98,7 +98,7 @@ const NavBar = () => {
             >
               <a href="tel:+27633816727" className="flex items-center">
                 <Phone className="h-4 w-4 mr-2" />
-                Call Us
+                Call / WhatsApp
               </a>
             </Button>
           </div>
