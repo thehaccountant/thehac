@@ -22,9 +22,11 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="mb-4">
-              <div className="text-3xl font-bold bg-gradient-to-r from-hac-blue to-hac-lightblue text-transparent bg-clip-text">
-                HAC
-              </div>
+              <img 
+                src="/lovable-uploads/hacnobg1.png" 
+                alt="HAC Logo" 
+                className="h-12 w-auto mb-2"
+              />
               <div className="text-sm text-gray-600 dark:text-gray-400">
                 The Home for Accounting Consulting
               </div>
