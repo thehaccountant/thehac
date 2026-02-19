@@ -95,7 +95,7 @@ const Index = () => {
                     size="lg" 
                     icon={<Phone className="h-5 w-5" />}
                   >
-                    Book a Free Consultation
+                    Book a Consultation
                   </CTAButton>
                   
                   <CTAButton 
