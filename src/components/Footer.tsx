@@ -139,11 +139,11 @@ const Footer = () => {
 
         {/* Bottom Footer */}
         <div className="mt-12 pt-4 border-t border-gray-200 dark:border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 md:mb-0">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-gray-600 dark:text-gray-400">
               &copy; {currentYear} HAC (The Home of Accounting Consulting). All rights reserved.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2">
               <Link
                 to="/contact"
                 className="text-sm text-gray-600 hover:text-hac-blue dark:text-gray-400 dark:hover:text-hac-lightblue transition-colors"
@@ -156,6 +156,14 @@ const Footer = () => {
               >
                 Services
               </Link>
+              <a
+                href="https://architeq.co.za"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-600 hover:text-hac-blue dark:text-gray-400 dark:hover:text-hac-lightblue transition-colors"
+              >
+                Built by Architeq Web Agency
+              </a>
             </div>
           </div>
         </div>
